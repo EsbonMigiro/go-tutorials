@@ -1,0 +1,21 @@
+--------Switch to the PostgreSQL user----------------------------
+
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+--------Switch to the PostgreSQL user--------------------------------
+sudo -i -u postgres
+
+--------------Open the PostgreSQL prompt-------------------------
+psql
+--------------Create a new database----------------------
+CREATE DATABASE godb;
+----------------------------Create a new user with a password--------------------------------
+CREATE USER Esbon WITH ENCRYPTED PASSWORD 'Esbon@0925';
+
+------------------------Grant privileges to the user on the database--------------------------
+GRANT ALL PRIVILEGES ON DATABASE godb TO Esbon;
+-------------------------------Exit the PostgreSQL prompt-----------------------------
+\q
+-----------------------------------exit--------------------
+exit

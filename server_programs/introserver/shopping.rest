@@ -1,0 +1,15 @@
+//// shopping items
+GET "http://localhost:8080/shopping-item"
+
+
+// post method
+
+POST "http://localhost:8080/shopping-item"
+Content-Type: application/json
+
+{
+    "name": "Piza"
+}
+//delete method
+
+DELETE  "http://localhost:8080/shopping-item/uuid"
